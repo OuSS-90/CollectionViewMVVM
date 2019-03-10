@@ -12,6 +12,12 @@
 		CDB16BFD2234353000F79A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB16BFB2234353000F79A5E /* Main.storyboard */; };
 		CDB16BFF2234353200F79A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB16BFE2234353200F79A5E /* Assets.xcassets */; };
 		CDB16C022234353200F79A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB16C002234353200F79A5E /* LaunchScreen.storyboard */; };
+		CDB16C102234369B00F79A5E /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB16C0E2234369B00F79A5E /* Extensions+UIView.swift */; };
+		CDB16C112234369B00F79A5E /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB16C0F2234369B00F79A5E /* CachedImageView.swift */; };
+		CDB16C13223436C500F79A5E /* AnimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB16C12223436C500F79A5E /* AnimeService.swift */; };
+		CDB16C152234374800F79A5E /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB16C142234374800F79A5E /* Anime.swift */; };
+		CDB16C172234377700F79A5E /* AnimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB16C162234377700F79A5E /* AnimeViewModel.swift */; };
+		CDB16C1922343DA900F79A5E /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB16C1822343DA900F79A5E /* AnimeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		CDB16BFE2234353200F79A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB16C012234353200F79A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDB16C032234353200F79A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB16C0E2234369B00F79A5E /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		CDB16C0F2234369B00F79A5E /* CachedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		CDB16C12223436C500F79A5E /* AnimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeService.swift; sourceTree = "<group>"; };
+		CDB16C142234374800F79A5E /* Anime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
+		CDB16C162234377700F79A5E /* AnimeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeViewModel.swift; sourceTree = "<group>"; };
+		CDB16C1822343DA900F79A5E /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,60 @@
 		CDB16BF62234353000F79A5E /* CollectionViewMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CDB16C0D2234366C00F79A5E /* Utils */,
+				CDB16C0C2234366200F79A5E /* Service */,
+				CDB16C0B2234364A00F79A5E /* ViewModel */,
+				CDB16C0A2234364500F79A5E /* View */,
+				CDB16C092234363D00F79A5E /* Model */,
 				CDB16BF72234353000F79A5E /* AppDelegate.swift */,
-				CDB16BF92234353000F79A5E /* ViewController.swift */,
 				CDB16BFB2234353000F79A5E /* Main.storyboard */,
 				CDB16BFE2234353200F79A5E /* Assets.xcassets */,
 				CDB16C002234353200F79A5E /* LaunchScreen.storyboard */,
 				CDB16C032234353200F79A5E /* Info.plist */,
 			);
 			path = CollectionViewMVVM;
+			sourceTree = "<group>";
+		};
+		CDB16C092234363D00F79A5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDB16C142234374800F79A5E /* Anime.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDB16C0A2234364500F79A5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDB16BF92234353000F79A5E /* ViewController.swift */,
+				CDB16C1822343DA900F79A5E /* AnimeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDB16C0B2234364A00F79A5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDB16C162234377700F79A5E /* AnimeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDB16C0C2234366200F79A5E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CDB16C12223436C500F79A5E /* AnimeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CDB16C0D2234366C00F79A5E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDB16C0F2234369B00F79A5E /* CachedImageView.swift */,
+				CDB16C0E2234369B00F79A5E /* Extensions+UIView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +195,12 @@
 			files = (
 				CDB16BFA2234353000F79A5E /* ViewController.swift in Sources */,
 				CDB16BF82234353000F79A5E /* AppDelegate.swift in Sources */,
+				CDB16C152234374800F79A5E /* Anime.swift in Sources */,
+				CDB16C112234369B00F79A5E /* CachedImageView.swift in Sources */,
+				CDB16C1922343DA900F79A5E /* AnimeCell.swift in Sources */,
+				CDB16C102234369B00F79A5E /* Extensions+UIView.swift in Sources */,
+				CDB16C13223436C500F79A5E /* AnimeService.swift in Sources */,
+				CDB16C172234377700F79A5E /* AnimeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
